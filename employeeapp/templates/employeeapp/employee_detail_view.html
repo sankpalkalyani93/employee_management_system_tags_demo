@@ -8,6 +8,7 @@
             <th>Last Name</th>
             <th>Department</th>
             <th>Position</th>
+            <th>Add Tags</th>
         </tr>
     </thead>
     <tbody>
@@ -16,6 +17,7 @@
                 <td>{{ employees.last_name }}</td>
                 <td>{{ employees.department.dname | upper }}</td>
                 <td>{{ employees.position.title }}</td>
+                <td><a href="{% url 'add_tags_to_employee' employee_id=employees.id %}">Tag Employee</a></td>
             </tr>
 
     </tbody>
